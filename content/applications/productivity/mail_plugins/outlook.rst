@@ -75,6 +75,25 @@ Connect your database
       Only a limited amount of *Company Insights* (*Lead Enrichment*) requests are available as a
       trial. This feature requires :ref:`prepaid credits <mail_plugins/pricing>`.
 
+   .. warning::
+      If, after a short while, the panel is still empty, it is possible that your browser cookie
+      settings prevented it from loading.
+      Note that these settings also change if you are in "Incognito" mode on your
+      browser.
+
+      To fix this issue, configure your browser to always allow cookies on Odoo's plugin page.
+
+      For Google Chrome, you can do so by following the guide at:
+      `https://support.google.com/chrome/answer/95647 <https://support.google.com/chrome/answer/95647#:~:text=Allow%20or%20block%20cookies%20for%20a%20specific%20site>`_
+      and adding `download.odoo.com` to the list of `Sites that can always use cookies`.
+
+      .. image:: outlook/cookie-fix.png
+         :align: center
+         :alt: Chrome cookie configuration to fix the empty panel issue
+
+      Once done, the Outlook panel needs to be opened again.
+
+
 #. Enter your Odoo database URL and click on *Login*.
 
    .. image:: outlook/enter-database-url.png
