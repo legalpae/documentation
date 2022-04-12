@@ -40,28 +40,175 @@ Headings
 .. important::
    Each document must have **exactly one H1 heading**. No less, no more.
 
-.. _contributing/markup:
+.. _contributing/markups:
 
-Markup
-======
+Markups
+=======
 
-.. _contributing/inline-markup:
+.. _contributing/markups/italic:
 
-Inline markup
+Emphasis (italic)
+-----------------
+
+To emphasize a part of the text
+
+.. list-table::
+   :widths: 10 90
+
+   * - RST
+     - .. code-block:: rst
+
+          *Text*
+
+   * - Render
+     - *Text*
+
+.. _contributing/markups/bold:
+
+Strong emphasis (bold)
+----------------------
+
+Emphasize your business: be **bold**! Call 911 **now**!
+
+RST
+~~~
+
+.. code-block:: rst
+
+   **Text**
+
+Example of output
+~~~~~~~~~~~~~~~~~
+
+**Text**
+
+.. _contributing/markups/code-sample:
+
+Code sample
+-----------
+
+fgsdgsdgsgffgsd
+
+**RST**
+
+.. code-block:: rst
+
+   ``Text``
+
+**Render**
+
+``Text``
+
+.. _contributing/markups/guilabel:
+
+GUI element
+-----------
+
+The ``guilabel`` markup.....
+Any text of the interactive user interface.
+
+**RST**
+
+.. code-block:: rst
+
+   :guilabel:`Save`
+
+**Render**
+
+:guilabel:`Save`
+
+.. _contributing/markups/menuselection:
+
+Menu selection
+--------------
+
+Guide a user through a sequence of menus.
+
+**RST**
+
+.. code-block:: rst
+
+   :menuselection:`Sales --> Configuration --> Settings`
+
+**Render**
+
+:menuselection:`Sales --> Configuration --> Settings`
+
+.. _contributing/markups/file:
+
+File
+----
+
+Indicate a file path
+``file``
+
+**RST**
+
+.. code-block:: rst
+
+   :file:`~/odoo/odoo-bin`
+
+**Render**
+
+:file:`~/odoo/odoo-bin`
+
+.. _contributing/markups/command:
+
+Command
+-------
+``command``
+Highlight a command
+
+**RST**
+
+.. code-block:: rst
+
+   :command:`python example.py`
+
+**Render**
+
+:command:`python example.py`
+
+.. _contributing/markups/abbreviations:
+
+Abbreviations
 -------------
 
-Use the following markups to emphasize your text to your liking:
+``abbr``
+Self-defining abbreviations
 
-+--------------+----------+
-| \*\*Text\*\* | **Text** |
-+--------------+----------+
-| \*Text\*     | *Text*   |
-+--------------+----------+
-| \`Text\`     | ``Text`` |
-+--------------+----------+
+**RST**
 
-.. seealso::
-   - :ref:`contributing/specialized-directives`
+.. code-block:: rst
+
+   :abbr:`SO (Sales Order)`
+
+**Render**
+
+:abbr:`SO (Sales Order)`
+
+.. _contributing/markups/definitions:
+
+Definitions
+-----------
+
+``dfn``
+Define a term
+
+**RST**
+
+.. code-block:: rst
+
+   :dfn:`a definition for a new term`
+
+**Render**
+
+:dfn:`a definition for a new term`
+
+.. _contributing/lists:
+
+Lists
+=====
 
 .. _contributing/bulleted-list:
 
@@ -521,6 +668,14 @@ Render
 
    Customize this admonition with a **Title** of your choice.
 
+.. _contributing/tables:
+
+Tables
+======
+
+Make use of `this convenient table generator <https://www.tablesgenerator.com/text_tables>`_ to
+build your tables. Then, copy-paste the generated formatting into your document.
+
 .. _contributing/code-blocks:
 
 Code blocks
@@ -887,49 +1042,6 @@ Render
 | First super long line that you break in two…
   here is rendered as a single line.
 | Second line that follows a line break.
-
-.. _contributing/comments:
-
-Add comments
-------------
-
-If you made a particular choice of writing or formatting that a future writer should be able to
-understand and take into account, consider writing a comment. Comments are blocks of text that do
-not count as a part of the documentation and that are used to pass a message to writers of the
-source code. They consist of a line starting with two dots and a space, followed by the comment.
-
-``.. For instance, this line will not be rendered in the documentation.``
-
-.. _contributing/tables:
-
-Use tables
-----------
-
-Make use of `this convenient table generator <https://www.tablesgenerator.com/text_tables>`_ to
-build your tables. Then, copy-paste the generated formatting into your document.
-
-.. _contributing/specialized-directives:
-
-Spice up your writing with specialized directives
--------------------------------------------------
-
-Use these additional directives to fine-tune your content:
-
-+-------------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| **Directive**     | **Purpose**                              | **Example**                                                                                                       |
-|                   |                                          +-----------------------------------------------------------+-------------------------------------------------------+
-|                   |                                          | **RST**                                                   | **HTML**                                              |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``abbr``          | Self-defining abbreviations              | ``:abbr:`SO (Sales Order)```                              | :abbr:`SO (Sales Order)`                              |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``command``       | Highlight a command                      | ``:command:`python example.py```                          | :command:`python example.py`                          |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``dfn``           | Define a term                            | ``:dfn:`a definition for a new term```                    | :dfn:`a definition for a new term`                    |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``file``          | Indicate a file path                     | ``:file:`~/odoo/odoo-bin```                               | :file:`~/odoo/odoo-bin`                               |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``menuselection`` | Guide a user through a sequence of menus | ``:menuselection:`Sales --> Configuration --> Settings``` | :menuselection:`Sales --> Configuration --> Settings` |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
 
 .. _contributing/escaping:
 
